@@ -1,0 +1,129 @@
+/* General body & background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(#1e3c72, #2a5298);
+    position: relative;
+}
+
+/* Header & nav */
+header {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Main content */
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px 5px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.btn:hover { background-color: #e55b00; }
+
+/* Affiliate section */
+.affiliate { margin: 30px auto; }
+
+/* Contact form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6600;
+    color: #fff;
+    cursor: pointer;
+}
+.contact-form button:hover { background-color: #e55b00; }
+
+/* Timer for game */
+#timerDisplay { font-size: 20px; margin-bottom: 10px; }
+
+/* Mobile controls */
+.mobile-controls button {
+    padding: 12px 18px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+.mobile-controls button:hover { background: rgba(255,255,255,0.4); }
+
+/* Animated waves background */
+.ocean {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    z-index:1;
+    overflow:hidden;
+}
+.wave {
+    position: absolute;
+    width:200%;
+    height:200%;
+    background: rgba(255,255,255,0.05);
+    border-radius: 43%;
+    animation: waveMove 20s linear infinite;
+}
+.wave:nth-child(2) { animation-duration: 25s; top: 20%; left: -10%; }
+.wave:nth-child(3) { animation-duration: 30s; top: 40%; left: -5%; }
+
+@keyframes waveMove {
+    0% { transform: translateX(0) translateY(0) rotate(0deg);}
+    50% { transform: translateX(-50px) translateY(20px) rotate(10deg);}
+    100% { transform: translateX(0) translateY(0) rotate(0deg);}
+}
+
+/* Responsive */
+@media (max-width: 600px){
+    canvas { width: 95%; height: auto; }
+    .mobile-controls button { width: 22%; margin: 3px; }
+}
